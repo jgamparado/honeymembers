@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Área de Miembros | Honey Trick Protocol</title>
+    <meta name="description" content="Tu área de miembros Honey Trick Protocol: dosis personalizada, protocolo de 21 días y seguimiento diario.">
+    <meta name="theme-color" content="#131010">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-canvas">
+      <div class="app-card">
+        <header class="app-header">
+          <a class="brand" href="#" id="brandLink" aria-label="Volver al inicio">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+                <path d="M20 3.5 L34.3 11.75 V28.25 L20 36.5 L5.7 28.25 V11.75 Z" stroke="url(#vg)" stroke-width="3.6" stroke-linejoin="round"/>
+                <path d="M20 12 C16.6 16.8 15.2 19.4 15.2 21.4 A4.8 4.8 0 0 0 24.8 21.4 C24.8 19.4 23.4 16.8 20 12 Z" fill="var(--gold)"/>
+                <defs>
+                  <linearGradient id="vg" x1="6" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="var(--crimson-deep)"/>
+                    <stop offset="1" stop-color="var(--crimson)"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-kicker">HONEY TRICK</span>
+              <span class="brand-name">Protocol</span>
+            </span>
+          </a>
+          <div class="header-actions">
+            <div class="streak-badge" id="streakBadge" title="Días completados">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 L4 14 H11 L10 22 L20 9 H12 Z"></path></svg>
+              <span id="streakCount">0</span>
+            </div>
+            <button class="icon-btn" id="settingsBtn" type="button" aria-label="Ajustes" aria-haspopup="dialog">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="4" y1="8" x2="20" y2="8"></line><circle cx="15" cy="8" r="2.4" fill="currentColor" stroke="none"></circle><line x1="4" y1="16" x2="20" y2="16"></line><circle cx="9" cy="16" r="2.4" fill="currentColor" stroke="none"></circle></svg>
+            </button>
+          </div>
+        </header>
+
+        <main class="app-scroll" id="appScroll"></main>
+
+        <nav class="bottom-nav" id="bottomNav" aria-label="Navegación principal">
+          <button class="nav-btn" type="button" data-nav="home">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 L12 4 L20 11"></path><path d="M6 10 V20 H18 V10"></path></svg>
+            <span>Inicio</span>
+          </button>
+          <button class="nav-btn" type="button" data-nav="program">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"></circle><path d="M10 8.5 L16 12 L10 15.5 Z" fill="currentColor" stroke="none"></path></svg>
+            <span>Protocolo</span>
+          </button>
+          <button class="nav-btn" type="button" data-nav="dose">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3 C7.5 9 6 12.2 6 14.6 A6 6 0 0 0 18 14.6 C18 12.2 16.5 9 12 3 Z"></path></svg>
+            <span>Mi dosis</span>
+          </button>
+          <button class="nav-btn" type="button" data-nav="tracker">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="15" rx="3"></rect><line x1="4" y1="9" x2="20" y2="9"></line><line x1="9" y1="3" x2="9" y2="6"></line><line x1="15" y1="3" x2="15" y2="6"></line></svg>
+            <span>Progreso</span>
+          </button>
+          <button class="nav-btn nav-btn-7x" type="button" data-nav="seven">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 L4 14 H11 L10 22 L20 9 H12 Z"></path></svg>
+            <span>7X</span>
+          </button>
+        </nav>
+
+        <div class="sheet-overlay" id="sheetOverlay" hidden></div>
+        <div class="settings-sheet" id="settingsSheet" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" hidden>
+          <div class="sheet-grabber" aria-hidden="true"></div>
+          <h3 id="settingsTitle">Ajustes</h3>
+
+          <div class="theme-row">
+            <div>
+              <p>Tema</p>
+              <small id="themeValue">Oscuro</small>
+            </div>
+            <button class="theme-toggle is-dark" id="themeToggle" type="button" role="switch" aria-checked="true" aria-label="Cambiar el modo de visualización">
+              <span class="knob"></span>
+            </button>
+          </div>
+
+          <div class="sheet-block">
+            <p class="sheet-label">Acelerador del Caballo 7x</p>
+            <p class="sheet-status" id="sevenStatus">No desbloqueado</p>
+            <button class="ghost-btn" id="sheetSevenBtn" type="button">Abrir la sección 7X</button>
+          </div>
+
+          <div class="sheet-block">
+            <p class="sheet-label">Datos</p>
+            <p class="sheet-hint">Tu dosis, tu progreso y tus notas se guardan solo en este navegador.</p>
+            <button class="danger-btn" id="resetAllBtn" type="button">Borrar todo</button>
+          </div>
+
+          <button class="sheet-done-btn" id="sheetDoneBtn" type="button">Listo</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
